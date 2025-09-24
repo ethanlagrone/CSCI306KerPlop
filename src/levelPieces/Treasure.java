@@ -6,8 +6,8 @@ import gameEngine.InteractionResult;
 //Gamepiece, Returns GET_POINT/NONE
 public class Treasure extends GamePiece {
 	
-	public Treasure(String label, int location) {
-		super('T', label, location);
+	public Treasure(int location) {
+		super('T', "Treasure", location);
 	}
 
 	@Override

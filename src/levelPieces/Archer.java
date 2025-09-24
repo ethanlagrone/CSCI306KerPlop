@@ -10,8 +10,8 @@ import gameEngine.InteractionResult;
 public class Archer extends GamePiece {
 
 	//Archer Constructor
-	public Archer(String label, int location) {
-		super('A', label, location);
+	public Archer(int location) {
+		super('A', "Archer", location);
 	}
 
 	//Archer shoots at player from afar

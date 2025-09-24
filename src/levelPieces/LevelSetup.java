@@ -24,24 +24,29 @@ public class LevelSetup {
 	public void level1() {
 		//create level1
 		Castle castle = new Castle();
-		Princess princess = new Princess("Princess", 10);
-		Archer archer = new Archer("Archer", 9);
-		Treasure treasure = new Treasure("Treasure", 2);
-		Goblin goblin = new Goblin("Goblin", 8);
-		Player player = new Player(0);
+		Queen queen = new Queen(19);
+		Archer archer = new Archer(17);
+		Treasure treasure = new Treasure(2);
+		Goblin goblin = new Goblin(8);
 		
-		board[princess.getLocation()] = princess;
-		board[princess.getLocation()-1] = castle;
+		board[queen.getLocation()] = queen;
+		board[queen.getLocation()-1] = castle;
 		board[archer.getLocation()] = archer;
 		board[treasure.getLocation()] = treasure;
-		board[goblin.getLocation()] = goblin;
-		board[player.getLocation()] = player;
-		
+		board[goblin.getLocation()] = goblin;		
 	}
 	
+	//create level2
 	public void level2() {
-		//create level2
-		System.out.print("Level 2");
+		System.out.println("Level 2");
+		clearBoard();
+	}
+	
+	//Clear the board
+	public void clearBoard() {
+		for(int i = 0; i<board.length; i++) {
+			board[i] = null;
+		}
 	}
 	
 	//Return the board
@@ -53,12 +58,15 @@ public class LevelSetup {
 	//Return an arraylist of the moving pieces
 	public ArrayList<Moveable> getMovingPieces() {
 		ArrayList<Moveable> moveable = new ArrayList<Moveable>();
-		for(int i = 0; i < board.length-1; i++) {
+		for(int i = 0; i < board.length; i++) {
 			//instanceof found on stackoverflow
 			if(board[i] instanceof Moveable) {
 				moveable.add((Moveable) board[i]);
 			}
 		}
+		for (Moveable m : moveable) {
+	        System.out.println(m);
+	    }
 		return moveable;
 	}
 

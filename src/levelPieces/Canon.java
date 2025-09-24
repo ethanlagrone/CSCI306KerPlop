@@ -8,8 +8,8 @@ import gameEngine.InteractionResult;
 //Gamepiece, Returns KILL/NONE
 public class Canon extends GamePiece{
 	
-	public Canon(String label, int location) {
-		super('<', label, location);
+	public Canon(int location) {
+		super('<', "Canon", location);
 	}
 
 	//Canon shoots at player if they're in front of them, 1/10 chance the shot kills the player

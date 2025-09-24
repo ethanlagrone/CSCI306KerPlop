@@ -7,8 +7,8 @@ import gameEngine.Moveable;
 //Gamepiece, Movable, moves linearly, returns HIT/NONE
 public class Goblin extends GamePiece implements Moveable {
 	
-	public Goblin(String label, int location) {
-		super('G', label, location);
+	public Goblin(int location) {
+		super('G', "Goblin", location);
 	}
 
 	//Goblin will hit the player if they are on the same spot
@@ -24,6 +24,12 @@ public class Goblin extends GamePiece implements Moveable {
 	//Goblin moves to the left
 	@Override
 	public void move(Drawable[] gameBoard, int playerLocation) {
-		this.setLocation(getLocation()-1);
+		int temp = this.getLocation();
+	    int newLocation = temp - 1;
+	    if (newLocation >= 0) {
+	        gameBoard[temp] = null;  
+	        this.setLocation(newLocation);   
+	        gameBoard[newLocation] = this;   
+	    }
 	}
 }
