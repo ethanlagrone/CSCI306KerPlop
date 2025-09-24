@@ -96,6 +96,13 @@ public class GameEngine {
 		System.out.println("The object of the game is to capture prizes without being killed.");
 		System.out.println("You need " + Player.POINTS_TO_ADVANCE + 
 				" points to advance, you die after " + Player.POINTS_TO_DIE + " hits.") ;
+		System.out.println("Archer - A: The archer shoots at the player if it is within 10 spots, random chance if the player gets killed.");
+		System.out.println("Canon - >: The canon shoots if the player is within 3 spots, and there's a 1/10 chance it kills.");
+		System.out.println("Castle - C: The castle stands in front of the princess and protects her by...doing nothing?");
+		System.out.println("Goblin - G: The goblin moves twoards the player and attacks it if it is within one.");
+		System.out.println("Ninja - N: The ninja jumps around in scilence, if it lands next to the user, you take a hit!");
+		System.out.println("Queen - Q: The queen was kidnapped and is kept behind the castle, if the player saves her, you move on!");
+		System.out.println("Treasure - T: If the player lands on the treasure, you get a point!");
 	}
 	
 

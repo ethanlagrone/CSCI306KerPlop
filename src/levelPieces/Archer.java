@@ -20,7 +20,7 @@ public class Archer extends GamePiece {
 		if(playerLocation < this.getLocation()) {
 			//Archer shoots at player if player in front of them
 			Random random = new Random();
-			int shot = random.nextInt(0, this.getLocation()-1);
+			int shot = random.nextInt(10, this.getLocation()-1);
 			if(shot == playerLocation) {
 				return InteractionResult.KILL;
 			} else {

@@ -4,7 +4,6 @@ import java.util.ArrayList;
 
 import gameEngine.Drawable;
 import gameEngine.Moveable;
-import gameEngine.Player;
 
 public class LevelSetup {
 	private Drawable[] board = new Drawable[20];
@@ -42,9 +41,21 @@ public class LevelSetup {
 	public void level2() {
 		System.out.println("Level 2");
 		clearBoard();
+		
+		Castle castle = new Castle();
+		Queen queen = new Queen(19);
+		Canon canon = new Canon(18);
+		Ninja ninja = new Ninja(5);
+		Treasure treasure = new Treasure(12);
+		
+		board[queen.getLocation()] = queen;
+		board[queen.getLocation()-1] = castle;
+		board[treasure.getLocation()] = treasure;
+		board[canon.getLocation()] = canon;
+		board[ninja.getLocation()] = ninja;
 	}
 	
-	//Clear the board
+	//Clear the board to setup another level
 	public void clearBoard() {
 		for(int i = 0; i<board.length; i++) {
 			board[i] = null;
@@ -66,16 +77,13 @@ public class LevelSetup {
 				moveable.add((Moveable) board[i]);
 			}
 		}
-		for (Moveable m : moveable) {
-	        System.out.println(m);
-	    }
 		return moveable;
 	}
 
 	//Return an arraylist of interacting pieces
 	public ArrayList<GamePiece> getInteractingPieces() {
-		ArrayList<GamePiece> interactingPieces = new ArrayList();
-		for(int i = 0; i < board.length-1; i++) {
+		ArrayList<GamePiece> interactingPieces = new ArrayList<GamePiece>();
+		for(int i = 0; i < board.length; i++) {
 			//instanceof found on stackoverflow
 			if(board[i] instanceof GamePiece) {
 				interactingPieces.add((GamePiece) board[i]);
