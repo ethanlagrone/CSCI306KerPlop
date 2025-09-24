@@ -7,14 +7,15 @@ import gameEngine.InteractionResult;
 public class Princess extends GamePiece {
 
 	public Princess(char symbol, String label, int location) {
-		super(symbol, label, location);
-		// TODO Auto-generated constructor stub
+		super('P', label, location);
 	}
 
 	@Override
 	public InteractionResult interact(Drawable[] gameBoard, int playerLocation) {
-		// TODO Auto-generated method stub
-		return null;
+		if(playerLocation == this.getLocation()) {
+			return InteractionResult.ADVANCE;
+		} else {
+			return InteractionResult.NONE;
+		}
 	}
-
 }

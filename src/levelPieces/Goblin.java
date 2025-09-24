@@ -8,20 +8,20 @@ import gameEngine.Moveable;
 public class Goblin extends GamePiece implements Moveable {
 
 	public Goblin(char symbol, String label, int location) {
-		super(symbol, label, location);
-		// TODO Auto-generated constructor stub
+		super('G', label, location);
 	}
 
 	@Override
 	public InteractionResult interact(Drawable[] gameBoard, int playerLocation) {
-		// TODO Auto-generated method stub
-		return null;
+		if(playerLocation == this.getLocation()) {
+			return InteractionResult.HIT;
+		} else {
+			return InteractionResult.NONE;
+		}
 	}
 
 	@Override
 	public void move(Drawable[] gameBoard, int playerLocation) {
-		// TODO Auto-generated method stub
-		
+		this.setLocation(getLocation()-1);
 	}
-
 }

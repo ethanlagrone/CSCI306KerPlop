@@ -4,16 +4,14 @@ import java.util.Random;
 
 import gameEngine.Drawable;
 import gameEngine.InteractionResult;
-import gameEngine.Player;
  
 
 //Gamepiece, Returns KILL/NONE, Interacts at a distance
 public class Archer extends GamePiece {
 
 	//Archer Constructor
-	public Archer(char symbol, String label, int location) {
-		super(symbol, label, location);
-		this.symbol = 'A';
+	public Archer(String label, int location) {
+		super('A', label, location);
 	}
 
 	//Archer interacts with player

@@ -8,8 +8,7 @@ import gameEngine.Moveable;
 public class Ninja extends GamePiece implements Moveable {
 
 	public Ninja(char symbol, String label, int location) {
-		super(symbol, label, location);
-		this.symbol = 'N';
+		super('N', label, location);
 	}
 
 	//Ninja hits them if it ends up within one spot of player
