@@ -5,9 +5,9 @@ Princess: Gamepiece, Returns ADVANCE/NONE
 Treasure: Gamepiece, Returns GET_POINT/NONE
 Goblin: Gamepiece, Movable, moves linearly, returns HIT/NONE
 Canon: Gamepiece, Returns KILL/NONE
+Ninja: Gamepiece, movable, moves randomly, Returns HIT/NONE
 
 Pieces in progress:
-Ninja: Gamepiece, movable, moves randomly, Returns HIT/NONE
 
 
 Pieces we still need:

@@ -6,7 +6,6 @@ import gameEngine.Drawable;
 import gameEngine.Moveable;
 
 public class LevelSetup {
-	
 	//Generate level
 	public void createLevel(int levelNum) {
 		if(levelNum == 1) {
@@ -31,7 +30,8 @@ public class LevelSetup {
 
 	//Return an arraylist of interacting pieces
 	public ArrayList<GamePiece> getInteractingPieces() {
-		// TODO Auto-generated method stub
+		ArrayList<GamePiece> interactingPieces = new ArrayList();
+		
 		return null;
 	}
 
