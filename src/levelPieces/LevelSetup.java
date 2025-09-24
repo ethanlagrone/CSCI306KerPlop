@@ -28,12 +28,14 @@ public class LevelSetup {
 		Archer archer = new Archer(17);
 		Treasure treasure = new Treasure(2);
 		Goblin goblin = new Goblin(8);
+		//Treasure treasure2 = new Treasure(6);
 		
 		board[queen.getLocation()] = queen;
 		board[queen.getLocation()-1] = castle;
 		board[archer.getLocation()] = archer;
 		board[treasure.getLocation()] = treasure;
-		board[goblin.getLocation()] = goblin;		
+		board[goblin.getLocation()] = goblin;	
+		//board[treasure2.getLocation()] = treasure2;
 	}
 	
 	//create level2
@@ -84,7 +86,6 @@ public class LevelSetup {
 
 	//return player starting location
 	public int getPlayerStartLoc() {
-		
 		return 0;
 	}
 

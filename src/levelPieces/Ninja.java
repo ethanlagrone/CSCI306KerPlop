@@ -27,8 +27,14 @@ public class Ninja extends GamePiece implements Moveable {
 	@Override
 	public void move(Drawable[] gameBoard, int playerLocation) {
 		Random random = new Random();
-		int ninjaSpot = random.nextInt(0, gameBoard.length-1);
-		this.setLocation(ninjaSpot);
+		int temp = this.getLocation();
+		//The princess and castle will be at the end, so ninja random location shouldn't be either of the last 2 spots.
+		int newLocation = random.nextInt(0, gameBoard.length-2);
+		if (newLocation >= 0) {
+	        gameBoard[temp] = null;  
+	        this.setLocation(newLocation);   
+	        gameBoard[newLocation] = this;   
+	    }
 	}
 
 }
