@@ -1,24 +1,17 @@
-Castle: Drawable, does not interact
-Archer: Gamepiece, Returns KILL/NONE, Interacts at a distance
-Princess: Gamepiece, Returns ADVANCE/NONE
-Treasure: Gamepiece, Returns GET_POINT/NONE
-Goblin: Gamepiece, Movable, moves linearly to the left, returns HIT/NONE
-Canon: Gamepiece, Returns KILL/NONE
-Ninja: Gamepiece, movable, moves randomly, Returns HIT/NONE
+Implements Drawable (no interaction and not actually a game piece, so doesn't extend GamePiece): 
+Castle: The castle stands in front of the princess and protects her.
+
+Extends GamePiece, implements Moveable:
+Goblin: Gamepiece, Movable, moves linearly to the left, returns HIT/NONE (The goblin moves to the left and attacks the player if it is within one.)
+Ninja: Gamepiece, movable, moves randomly, Returns HIT/NONE (The ninja jumps around in scilence, if it lands next to the user, user takes a hit.)
+
+Extends GamePiece with various InteractionResult:
+Archer: Gamepiece, Returns KILL/NONE, Interacts at a distance (The archer shoots at the player if it is within 10 spots, random chance if the player gets killed.)
+Queen: Gamepiece, Returns ADVANCE/NONE (The queen was kidnapped and is kept behind the castle, if the player saves her, player moves on)
+Treasure: Gamepiece, Returns GET_POINT/NONE (If the player lands on the treasure, player gets a point.)
+Canon: Gamepiece, Returns KILL/NONE (The canon shoots if the player is within 3 spots, and there's a 1/10 chance it kills.)
 
 
 
-Example descriptions(final descriptions need to be more like this):
-Implements Drawable (no interaction and not actually a game piece, so doesn't extend GamePiece)
-Doormat 
-Extends GamePiece, implements Moveable
-Minion.  Moves right (jumping over other pieces) until it reaches the rightmost space. Then moves left (jumping over other pieces) until it reaches the leftmost space. Continues in this pattern indefinitely.
-RandomMotionPiece. Since there would be a couple of pieces that move randomly, to avoid repeating code an abstract child class of GamePiece that implemented Moveable was implemented. No  objects of this type were created (it's abstract), and this piece does not override interact.
-Sniper and Unicorn move randomly
-Extends GamePiece with various InteractionResult
-NONE - Minion.
-HIT/NONE - BumbleBee (interacts on same location)
-KILL/NONE - Sniper (will kill a player that comes within 3 squares, unless there's another object in between (a piece on the same square as the player also "blocks" the sniper's shot).
-KILL/NONE - Kangalo. (will kill a player that is on the same square or beside it)
-ADVANCE/NONE - Unicorn (interacts on same location)
-GET_POINT/NONE - Prize (Gives a point if the player lands on it). 
+
+

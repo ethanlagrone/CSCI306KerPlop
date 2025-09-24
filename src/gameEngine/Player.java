@@ -108,7 +108,6 @@ public class Player implements Drawable {
 	 * Sets player status to advancing
 	 */
 	public void wonAdvance() {
-		System.out.println("DEBUG: Player status set to ADVANCING");
 		playerStatus = PlayerStatus.ADVANCING;
 	}
 
