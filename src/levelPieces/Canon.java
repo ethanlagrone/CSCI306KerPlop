@@ -8,7 +8,7 @@ import gameEngine.InteractionResult;
 //Gamepiece, Returns KILL/NONE
 public class Canon extends GamePiece{
 	
-	public Canon(char symbol, String label, int location) {
+	public Canon(String label, int location) {
 		super('<', label, location);
 	}
 

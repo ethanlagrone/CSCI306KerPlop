@@ -7,7 +7,7 @@ import gameEngine.Moveable;
 //Gamepiece, Movable, moves linearly, returns HIT/NONE
 public class Goblin extends GamePiece implements Moveable {
 	
-	public Goblin(char symbol, String label, int location) {
+	public Goblin(String label, int location) {
 		super('G', label, location);
 	}
 

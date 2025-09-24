@@ -9,7 +9,7 @@ import gameEngine.Moveable;
 //Gamepiece, movable, moves randomly, Returns HIT/NONE
 public class Ninja extends GamePiece implements Moveable {
 	
-	public Ninja(char symbol, String label, int location) {
+	public Ninja(String label, int location) {
 		super('N', label, location);
 	}
 

@@ -6,7 +6,7 @@ import gameEngine.InteractionResult;
 //Gamepiece, Returns ADVANCE/NONE
 public class Princess extends GamePiece {
 	
-	public Princess(char symbol, String label, int location) {
+	public Princess(String label, int location) {
 		super('P', label, location);
 	}
 
