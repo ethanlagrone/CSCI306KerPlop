@@ -12,6 +12,7 @@ public class Canon extends GamePiece{
 		super('<', label, location);
 	}
 
+	//Canon shoots at player if they're in front of them, 1/10 chance the shot kills the player
 	@Override
 	public InteractionResult interact(Drawable[] gameBoard, int playerLocation) {
 		if((playerLocation < this.getLocation()) && (playerLocation - this.getLocation() <= 3)){

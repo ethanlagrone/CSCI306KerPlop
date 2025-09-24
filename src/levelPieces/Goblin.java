@@ -11,6 +11,7 @@ public class Goblin extends GamePiece implements Moveable {
 		super('G', label, location);
 	}
 
+	//Goblin will hit the player if they are on the same spot
 	@Override
 	public InteractionResult interact(Drawable[] gameBoard, int playerLocation) {
 		if(playerLocation == this.getLocation()) {
@@ -20,6 +21,7 @@ public class Goblin extends GamePiece implements Moveable {
 		}
 	}
 
+	//Goblin moves to the left
 	@Override
 	public void move(Drawable[] gameBoard, int playerLocation) {
 		this.setLocation(getLocation()-1);

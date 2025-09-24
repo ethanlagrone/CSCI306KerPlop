@@ -1,14 +1,13 @@
 Pieces already done:
 Archer: Gamepiece, Returns KILL/NONE, Interacts at a distance
 Castle: Drawable, does not interact
-
+Princess: Gamepiece, Returns ADVANCE/NONE
+Treasure: Gamepiece, Returns GET_POINT/NONE
+Goblin: Gamepiece, Movable, moves linearly, returns HIT/NONE
+Canon: Gamepiece, Returns KILL/NONE
 
 Pieces in progress:
 Ninja: Gamepiece, movable, moves randomly, Returns HIT/NONE
 
 
 Pieces we still need:
-Princess: Gamepiece, Returns ADVANCE/NONE
-Treasure: Gamepiece, Returns GET_POINT/NONE
-Goblin: Gamepiece, Movable, moves linearly, returns HIT/NONE
-Canon: Gamepiece, Returns KILL/NONE

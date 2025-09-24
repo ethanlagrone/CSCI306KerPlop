@@ -14,7 +14,7 @@ public class Archer extends GamePiece {
 		super('A', label, location);
 	}
 
-	//Archer interacts with player
+	//Archer shoots at player from afar
 	@Override
 	public InteractionResult interact(Drawable[] gameBoard, int playerLocation) {
 		if(playerLocation < this.getLocation()) {

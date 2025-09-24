@@ -1,5 +1,7 @@
 package levelPieces;
 
+import java.util.Random;
+
 import gameEngine.Drawable;
 import gameEngine.InteractionResult;
 import gameEngine.Moveable;
@@ -21,10 +23,12 @@ public class Ninja extends GamePiece implements Moveable {
 		}
 	}
 
-	//Want this to move the ninja randomly
+	//Ninja moves randomly
 	@Override
 	public void move(Drawable[] gameBoard, int playerLocation) {
-		
+		Random random = new Random();
+		int ninjaSpot = random.nextInt(0, gameBoard.length-1);
+		this.setLocation(ninjaSpot);
 	}
 
 }
