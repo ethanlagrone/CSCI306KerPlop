@@ -16,7 +16,7 @@ public class Ninja extends GamePiece implements Moveable {
 	//Ninja hits them if it ends up within one spot of player
 	@Override
 	public InteractionResult interact(Drawable[] gameBoard, int playerLocation) {
-		if((playerLocation-1 == this.getLocation()) || (playerLocation+1 == this.getLocation())) {
+		if(playerLocation == this.getLocation() || playerLocation - 1 == this.getLocation() || playerLocation + 1 == this.getLocation()) {
 			return InteractionResult.HIT;
 		} else {
 			return InteractionResult.NONE;
