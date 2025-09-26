@@ -29,12 +29,29 @@ public class Ninja extends GamePiece implements Moveable {
 		Random random = new Random();
 		int temp = this.getLocation();
 		//The princess and castle will be at the end, so ninja random location shouldn't be either of the last 2 spots.
-		int newLocation = random.nextInt(0, gameBoard.length-2);
-		if (newLocation >= 0) {
+		int newLocation = random.nextInt(this.getLocation()-5, this.getLocation()+5);
+		
+		if (newLocation<0) {
+			newLocation=0;
+		}
+		else {if(newLocation>7) {
+			newLocation=7;
+		}}
+		
+		if (newLocation==playerLocation) {
+			if((newLocation-1)<0) {
+				newLocation++;
+			}
+			else {
+				newLocation--;
+			}
+		}
+		
+		if((newLocation>=0)&&(newLocation<8)) {
 	        gameBoard[temp] = null;  
 	        this.setLocation(newLocation);   
-	        gameBoard[newLocation] = this;   
-	    }
+	        gameBoard[newLocation] = this;  
+		}
 	}
 
 }
