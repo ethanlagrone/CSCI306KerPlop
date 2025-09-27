@@ -1,0 +1,135 @@
+I, Sedona Szczepaniak, certify that I participated equitably in the creation of assignment KerPlop, dated 9/26/2025.
+I, Ethan Lagrone, certify that I participated equitably in the creation of this assignment KerPlop, dated 9/26/2025.
+
+commit 37c432c97656ca6d05cdd8d47df718dd6368e613 (HEAD -> main, origin/main, origin/HEAD)
+Author: 1123581321345589144233377610987 <123220105+1123581321345589144233377610987@users.noreply.github.com>
+Date:   Fri Sep 26 22:44:52 2025 -0600
+
+    Rename IMG_4256.jpeg to UML.jpeg
+
+    changed file name so the graders will know what it is
+
+commit c233cc9e5ade07eabe710c596dd6d466d032452a
+Author: 1123581321345589144233377610987 <123220105+1123581321345589144233377610987@users.noreply.github.com>
+Date:   Fri Sep 26 22:42:16 2025 -0600
+
+    Add files via upload
+
+commit 1216b0603dd1459d384db6d6ca16e5ee985b7328
+Author: 1123581321345589144233377610987 <123220105+1123581321345589144233377610987@users.noreply.github.com>
+Date:   Fri Sep 26 14:15:36 2025 -0600
+
+    Update Archer.java
+
+    Fixed logic error
+
+commit dfed8d4cb2e9d0b0afdcc2049f941ea698199f17
+Author: 1123581321345589144233377610987 <123220105+1123581321345589144233377610987@users.noreply.github.com>
+Date:   Fri Sep 26 14:12:18 2025 -0600
+
+    Update Archer.java
+
+    Archer now maxes out at a 50% chance of hitting you. Should average out to the same difficulty
+
+commit 6f172078b8068bb6cac3f44c1e0fc9dcdfbac186
+Author: ethanlagrone <ethan_lagrone@mines.edu>
+Date:   Fri Sep 26 13:43:47 2025 -0600
+
+    Create README.md
+
+commit c775ee842fd12b26d0d9168c920d05a50a485633
+Author: 1123581321345589144233377610987 <123220105+1123581321345589144233377610987@users.noreply.github.com>
+Date:   Fri Sep 26 13:05:25 2025 -0600
+
+    Update PieceDescriptions.txt
+
+    Updated descriptions of ninja and archer
+
+commit a9252c1e61cb4a53517060a84779445cf50f8e1e
+Author: 1123581321345589144233377610987 <123220105+1123581321345589144233377610987@users.noreply.github.com>
+Date:   Fri Sep 26 13:02:44 2025 -0600
+
+    Update Ninja.java
+
+    Ninja can move a max of 5 spaces and should no longer land on top of the player
+
+commit cb53fff839aacb6785a75d7bf1321d5da073b9e9
+Author: 1123581321345589144233377610987 <123220105+1123581321345589144233377610987@users.noreply.github.com>
+Date:   Fri Sep 26 13:01:27 2025 -0600
+
+    Update Archer.java
+
+    Archer has a higher chance of hitting you the closer you are
+
+commit 24e5a9d2b5b5b3097ef21774722a7194c5cd3446
+Author: ethanlagrone <ethan_lagrone@mines.edu>
+Date:   Wed Sep 24 09:58:07 2025 -0600
+
+    Improved and fixed ninja
+
+commit 38f5ac4d3b457512468186c8dd0b2807a668c29b
+Author: ethanlagrone <ethan_lagrone@mines.edu>
+Date:   Wed Sep 24 09:48:35 2025 -0600
+
+    Removed some debug code, fleshed out PieceDescription, and fleshed out board instructions.
+
+commit b66eb6992c0d03d4a37e2f34fee3b8fa573272d4
+Author: ethanlagrone <ethan_lagrone@mines.edu>
+Date:   Wed Sep 24 09:39:58 2025 -0600
+
+    Fixed queen bug, setup level 2, tested ninja and canon, setup game directions
+
+commit bced61412eb0e48d7bbc66778465e2779bb06d98
+Author: ethanlagrone <ethan_lagrone@mines.edu>
+Date:   Tue Sep 23 20:10:57 2025 -0600
+
+    Mostly functional, level 1 is functional, queen has a bug, level 2 still needed, pieceDescriptions need fleshed out
+
+commit de7234894cde202649f58ccc659e36bd97bc3c12
+Author: ethanlagrone <ethan_lagrone@mines.edu>
+Date:   Tue Sep 23 19:55:19 2025 -0600
+
+    Fixe goblin not moving bug, edited all piece classes so that they have their symbol hard coded
+
+commit bd30ea53063a53bd431191d7d18efad009c5d91a
+Author: ethanlagrone <ethan_lagrone@mines.edu>
+Date:   Tue Sep 23 19:33:16 2025 -0600
+
+    Expanded LevelSetup and made it functional, fixed some of the gamepiece classes
+
+commit e42c58342f361f261a7e57fd1cc14d64d85ea1dd
+Author: ethanlagrone <ethan_lagrone@mines.edu>
+Date:   Tue Sep 23 18:55:55 2025 -0600
+
+    Continuing progress on levelSetup and pieces
+
+commit e171d75e633c18c1f1257245f7eb6bc3c8610c4d
+Author: ethanlagrone <ethan_lagrone@mines.edu>
+Date:   Tue Sep 23 18:42:33 2025 -0600
+
+    Basic implementations of pieces complete
+
+commit e18958ec31a4d2d051610c96f75f880999af3955
+Author: ethanlagrone <ethan_lagrone@mines.edu>
+Date:   Tue Sep 23 18:33:25 2025 -0600
+
+    Fleshed out most of the pieces
+
+commit 022d8a5f8e7c6c1c50c67ab51c27ec40e102eef7
+Author: ethanlagrone <ethan_lagrone@mines.edu>
+Date:   Tue Sep 23 18:19:12 2025 -0600
+
+    Added all the stub classes, created text file that shows the requirements we need to fulfill
+
+commit 22810dabd9941841ecf50f6d629d819b6c347f3f
+Author: ethanlagrone <ethan_lagrone@mines.edu>
+Date:   Tue Sep 23 17:54:37 2025 -0600
+
+    Added stubs for level creation and added three pieces, only two of which are actually implemented
+
+commit fcd4ef5315b39736cc6de7e9c129b66b4a7f0c5e
+Author: ethanlagrone <ethan_lagrone@mines.edu>
+Date:   Sun Sep 21 17:22:18 2025 -0600
+
+    making the repo
+(END)
