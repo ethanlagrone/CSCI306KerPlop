@@ -3,10 +3,10 @@ Castle: The castle stands in front of the princess and protects her.
 
 Extends GamePiece, implements Moveable:
 Goblin: Gamepiece, Movable, moves linearly to the left, returns HIT/NONE (The goblin moves to the left and attacks the player if it is within one.)
-Ninja: Gamepiece, movable, moves randomly, Returns HIT/NONE (The ninja jumps around in scilence, if it lands next to the user, user takes a hit.)
+Ninja: Gamepiece, movable, moves randomly within a range of 5 spaces, Returns HIT/NONE (The ninja jumps around in scilence, if it lands next to the user, user takes a hit.)
 
 Extends GamePiece with various InteractionResult:
-Archer: Gamepiece, Returns KILL/NONE, Interacts at a distance (The archer shoots at the player if it is within 10 spots, random chance if the player gets killed.)
+Archer: Gamepiece, Returns KILL/NONE, Interacts at a distance (The archer shoots at the player if it is within 10 spots, random chance if the player gets killed with a higher chance the closer the player is.)
 Queen: Gamepiece, Returns ADVANCE/NONE (The queen was kidnapped and is kept behind the castle, if the player saves her, player moves on)
 Treasure: Gamepiece, Returns GET_POINT/NONE (If the player lands on the treasure, player gets a point.)
 Canon: Gamepiece, Returns KILL/NONE (The canon shoots if the player is within 3 spots, and there's a 1/10 chance it kills.)
