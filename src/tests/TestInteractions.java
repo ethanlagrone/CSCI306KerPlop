@@ -1,12 +1,14 @@
 package tests;
 
 import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertTrue;
 
 import org.junit.jupiter.api.Test;
 
 import gameEngine.Drawable;
 import gameEngine.GameEngine;
 import gameEngine.InteractionResult;
+import levelPieces.Archer;
 import levelPieces.Canon;
 import levelPieces.Goblin;
 import levelPieces.Ninja;
@@ -18,14 +20,39 @@ public class TestInteractions {
 	//test archer interactions
 	@Test
 	public void archerInteraction() {
-		//stub function
+		Drawable [] gameBoard = new Drawable[GameEngine.BOARD_SIZE];
+		Archer archer = new Archer(5);
+		gameBoard[5] = archer;
+		int hitCount = 0;
+		for(int i = 0; i<500; i++) {
+			InteractionResult result = archer.interact(gameBoard, 3);
+			if(InteractionResult.KILL == result){
+				hitCount+=1;
+			}
+		}
+		//Barring an extreme statistical anomaly, this should be true
+		assertTrue(hitCount > 0);
 	}
+	
 	
 	//test canon interactions
 	@Test
 	public void canonInteraction() {
-		//Not sure how to test random hits
+		Drawable [] gameBoard = new Drawable[GameEngine.BOARD_SIZE];
+		Canon canon = new Canon(5);
+		gameBoard[5] = canon;
+		int hitCount = 0;
+		for(int i = 0; i<500; i++) {
+			InteractionResult result = canon.interact(gameBoard, 3);
+			if(InteractionResult.KILL == result){
+				hitCount+=1;
+			}
+		}
+		
+		//Barring an extreme statistical anomaly, this should be true
+		assertTrue(hitCount > 0);
 	}
+	
 	
 	//test goblin interactions
 	@Test
@@ -44,6 +71,7 @@ public class TestInteractions {
 			assertEquals(InteractionResult.NONE, goblin.interact(gameBoard, i));
 	}
 	
+	
 	//test ninja interaction
 	@Test
 	public void ninjaInteraction() {
@@ -60,6 +88,7 @@ public class TestInteractions {
 			assertEquals(InteractionResult.NONE, ninja.interact(gameBoard, i));
 	}
 	
+	
 	//test queen interaction 
 	@Test
 	public void queenInteraction() {
@@ -75,6 +104,7 @@ public class TestInteractions {
 		for (int i=6; i<GameEngine.BOARD_SIZE; i++)	
 			assertEquals(InteractionResult.NONE, queen.interact(gameBoard, i));
 	}
+	
 	
 	//test treasure interaction
 	@Test

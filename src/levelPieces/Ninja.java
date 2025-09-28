@@ -33,10 +33,11 @@ public class Ninja extends GamePiece implements Moveable {
 		
 		if (newLocation<0) {
 			newLocation=0;
-		}
-		else {if(newLocation>7) {
+		} else {
+			if(newLocation>7) {
 			newLocation=7;
-		}}
+			}
+		}
 		
 		if (newLocation==playerLocation) {
 			if((newLocation-1)<0) {

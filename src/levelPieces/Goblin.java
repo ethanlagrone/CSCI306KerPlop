@@ -26,6 +26,9 @@ public class Goblin extends GamePiece implements Moveable {
 	public void move(Drawable[] gameBoard, int playerLocation) {
 		int temp = this.getLocation();
 	    int newLocation = temp - 1;
+	    if (newLocation == playerLocation) {
+	    	newLocation = this.getLocation();
+	    }
 	    if (newLocation >= 0) {
 	        gameBoard[temp] = null;  
 	        this.setLocation(newLocation);   
