@@ -1,7 +1,113 @@
 I, Sedona Szczepaniak, certify that I participated equitably in the creation of assignment KerPlop, dated 9/26/2025.
 I, Ethan Lagrone, certify that I participated equitably in the creation of this assignment KerPlop, dated 9/26/2025.
 
-commit 37c432c97656ca6d05cdd8d47df718dd6368e613 (HEAD -> main, origin/main, origin/HEAD)
+commit 012d9063574136bee90e248ff4af00491fc1d0ce (HEAD -> main, origin/main, origin/HEAD)
+Author: 1123581321345589144233377610987 <123220105+1123581321345589144233377610987@users.noreply.github.com>
+Date:   Mon Sep 29 13:04:12 2025 -0600
+
+    Update TestInteractions.java
+
+    added comments making failure chance more clear
+
+commit 3aa80f9c90bf9f1bba62f67c785b9a8ddd0ef639
+Author: 1123581321345589144233377610987 <123220105+1123581321345589144233377610987@users.noreply.github.com>
+Date:   Mon Sep 29 12:31:03 2025 -0600
+
+    Update TestInteractions.java
+
+    Fixed error where variable was initialized twice (oops)
+
+commit 843374f344f57e25afb26b33bf9671264836aded
+Author: 1123581321345589144233377610987 <123220105+1123581321345589144233377610987@users.noreply.github.com>
+Date:   Mon Sep 29 12:28:48 2025 -0600
+
+    Update TestInteractions.java
+
+    Cannon interaction test is now also based on 99% confidence interval
+
+commit d2c378b8ec7309f55a307112a96b33080c78ea12
+Author: 1123581321345589144233377610987 <123220105+1123581321345589144233377610987@users.noreply.github.com>
+Date:   Mon Sep 29 12:07:42 2025 -0600
+
+    Update TestInteractions.java
+
+    Updated first archer test (close up) to also be based on a 99% confidence interval (yay stats stuff)
+
+commit f70bcddbe829f92c79b1e61eff185fe5c53deda2
+Author: 1123581321345589144233377610987 <123220105+1123581321345589144233377610987@users.noreply.github.com>
+Date:   Mon Sep 29 11:58:04 2025 -0600
+
+    Update TestMovingPieces.java
+
+    Added a check to make sure the Ninja is not moving more than 5 spaces at a time
+
+commit 1036550b521d980b2f55ad6d4048f60c132b91fc
+Author: 1123581321345589144233377610987 <123220105+1123581321345589144233377610987@users.noreply.github.com>
+Date:   Mon Sep 29 11:50:45 2025 -0600
+
+    Update TestInteractions.java
+
+    Forgot comment on previous commit:
+
+    Edited second archer interaction test to be based on a 99% confidence interval. See below for the stat-sy details:
+
+    (Note: not at all your fault Ethan as I literally just fixed some things with archer that would have affected this anyway)
+
+    The probability of getting hit assuming the player is at location 1 and the archer is at location 15 (they are 14 away from each other) is (21-14)/42 = 7/42. Based on some stats stuff (bootstrap distribution), for a sample size of 500 the number of hits should fall between 57 and 109 99% of the time
+
+commit f0506c8869d3550abf120dc7d3a139f2e201e607
+Author: 1123581321345589144233377610987 <123220105+1123581321345589144233377610987@users.noreply.github.com>
+Date:   Mon Sep 29 11:46:49 2025 -0600
+
+    Update TestInteractions.java
+
+commit 15d286bd5e4374bd6b7d8e96531225d1fe932819
+Author: 1123581321345589144233377610987 <123220105+1123581321345589144233377610987@users.noreply.github.com>
+Date:   Sun Sep 28 19:59:07 2025 -0600
+
+    Update Archer.java
+
+    fixed logic error to do with the number of spaces on the board
+
+commit d46f0ac26e7449a6ea8bd0237ade674b243db193
+Author: ethanlagrone <ethan_lagrone@mines.edu>
+Date:   Sun Sep 28 18:57:29 2025 -0600
+
+    Finishing touches, fleshed out canon and archer interactions
+
+commit 40da5070f3b0e7a2fe2d8068fae236df63037664
+Author: ethanlagrone <ethan_lagrone@mines.edu>
+Date:   Sat Sep 27 22:39:21 2025 -0600
+
+    Most tests functioning, showed problems in ninja logic which were fixed
+
+commit 046364f074ad5442367b5219105ca56a5769a3a6
+Author: ethanlagrone <ethan_lagrone@mines.edu>
+Date:   Sat Sep 27 14:11:25 2025 -0600
+
+    Ninja, queen and treasure interaction test
+
+commit 68c99391a550ebffa5c10b90c614476af22d94ee
+Author: ethanlagrone <ethan_lagrone@mines.edu>
+Date:   Sat Sep 27 13:57:51 2025 -0600
+
+    Goblin test, very similar to bumblebee on example, seems to work
+
+commit 7f825abe7faf1f96920f063ad5469ce2b2a5c6be
+Author: ethanlagrone <ethan_lagrone@mines.edu>
+Date:   Sat Sep 27 13:48:41 2025 -0600
+
+    Created stub test functions, test package, and two classes from the rubric
+
+commit e14265c37c02557c5861d6868067f248bdaa6db2
+Author: 1123581321345589144233377610987 <123220105+1123581321345589144233377610987@users.noreply.github.com>
+Date:   Fri Sep 26 23:07:49 2025 -0600
+
+    Create gitlog.txt
+
+    added gitlog
+
+commit 37c432c97656ca6d05cdd8d47df718dd6368e613
 Author: 1123581321345589144233377610987 <123220105+1123581321345589144233377610987@users.noreply.github.com>
 Date:   Fri Sep 26 22:44:52 2025 -0600
 
@@ -132,4 +238,3 @@ Author: ethanlagrone <ethan_lagrone@mines.edu>
 Date:   Sun Sep 21 17:22:18 2025 -0600
 
     making the repo
-(END)
