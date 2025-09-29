@@ -1,14 +1,12 @@
 package tests;
 
 import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.assertNotEquals;
 import static org.junit.Assert.assertTrue;
 
 import org.junit.jupiter.api.Test;
 
 import gameEngine.Drawable;
 import gameEngine.GameEngine;
-import levelPieces.Castle;
 import levelPieces.Goblin;
 import levelPieces.Ninja;
 
@@ -21,7 +19,6 @@ public class TestMovingPieces {
 		Drawable [] gameBoard = new Drawable[GameEngine.BOARD_SIZE];
 		Ninja ninja = new Ninja(5);
 		gameBoard[5] = ninja;
-		int ninjaLocation = ninja.getLocation();
 		//Ninja should never land on the player 
 		for(int i = 0; i < 100; i++) {
 			ninja.move(gameBoard, 6);

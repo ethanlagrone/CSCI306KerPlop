@@ -21,17 +21,34 @@ public class TestInteractions {
 	@Test
 	public void archerInteraction() {
 		Drawable [] gameBoard = new Drawable[GameEngine.BOARD_SIZE];
-		Archer archer = new Archer(5);
-		gameBoard[5] = archer;
+		Archer archer = new Archer(15);
+		gameBoard[15] = archer;
 		int hitCount = 0;
+		//check if archer kills player over 500 attempts, almost assuredly will be true
 		for(int i = 0; i<500; i++) {
-			InteractionResult result = archer.interact(gameBoard, 3);
+			InteractionResult result = archer.interact(gameBoard, 13);
 			if(InteractionResult.KILL == result){
 				hitCount+=1;
 			}
 		}
 		//Barring an extreme statistical anomaly, this should be true
 		assertTrue(hitCount > 0);
+		
+		
+		
+		int hitCount2 = 0;
+		//check if archer does not hit player if they are far away, it should not
+		for(int i = 0; i<500; i++) {
+			InteractionResult result = archer.interact(gameBoard, 1);
+			if(InteractionResult.KILL == result){
+				hitCount2+=1;
+			}
+		}
+		
+		assertTrue(hitCount2 == 0);
+		
+		
+		
 	}
 	
 	
@@ -42,6 +59,7 @@ public class TestInteractions {
 		Canon canon = new Canon(5);
 		gameBoard[5] = canon;
 		int hitCount = 0;
+		//check if cannon kills player over 500 attempts, almost assuredly will be true
 		for(int i = 0; i<500; i++) {
 			InteractionResult result = canon.interact(gameBoard, 3);
 			if(InteractionResult.KILL == result){
@@ -51,10 +69,22 @@ public class TestInteractions {
 		
 		//Barring an extreme statistical anomaly, this should be true
 		assertTrue(hitCount > 0);
+		
+		int hitCount2 = 0;
+		//check if canon does not hit player if they are far away, it should not
+		//this found a bug in the canon hit logic, negative numbers were being factored in, added an absolute value
+		for(int i = 0; i<500; i++) {
+			InteractionResult result = canon.interact(gameBoard, 0);
+			if(InteractionResult.KILL == result){
+				hitCount2 +=1;
+			}
+		}
+		
+		assertTrue(hitCount2 == 0);
 	}
 	
 	
-	//test goblin interactions
+	//test goblin interactions(similar to bumble bee an example. This code heavily borrows from the bumblebee test.
 	@Test
 	public void goblinInteraction() {
 		Drawable [] gameBoard = new Drawable[GameEngine.BOARD_SIZE];
