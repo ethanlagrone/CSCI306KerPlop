@@ -11,7 +11,7 @@ import levelPieces.Goblin;
 import levelPieces.Ninja;
 
 public class TestMovingPieces {
-	
+
 	//Testing ninja movement
 	@Test
 	public void testMovingNinja() {
@@ -19,10 +19,14 @@ public class TestMovingPieces {
 		Drawable [] gameBoard = new Drawable[GameEngine.BOARD_SIZE];
 		Ninja ninja = new Ninja(5);
 		gameBoard[5] = ninja;
-		//Ninja should never land on the player 
+		int oldLoc=5;
 		for(int i = 0; i < 100; i++) {
+			//Ninja should never land on the player 
 			ninja.move(gameBoard, 6);
 			assertTrue(ninja.getLocation() != 6);
+			//Ninja should never move more than 5 spaces at a time
+			assertTrue(Math.abs(ninja.getLocation()-oldLoc)<=5);
+			oldLoc=ninja.getLocation();
 		}
 	}
 	
