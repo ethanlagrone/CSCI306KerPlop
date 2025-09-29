@@ -69,16 +69,20 @@ public class TestInteractions {
 		Canon canon = new Canon(5);
 		gameBoard[5] = canon;
 		int hitCount = 0;
-		//check if cannon kills player over 500 attempts, almost assuredly will be true
+		//count amount of times cannon hits player over 500 attempts
 		for(int i = 0; i<500; i++) {
 			InteractionResult result = canon.interact(gameBoard, 3);
 			if(InteractionResult.KILL == result){
 				hitCount+=1;
 			}
-		}
+		} 
 		
-		//Barring an extreme statistical anomaly, this should be true
-		assertTrue(hitCount > 0);
+		//Based on a 99% confidence interval (chance of hitting player
+		//is 1/10. With 500 trials that produces an SE of about .014
+		//yay stats!)
+		assertTrue((hitCount>28)&&(hitCount<72));
+		
+		int hitCount2 = 0;
 		
 		int hitCount2 = 0;
 		//check if canon does not hit player if they are far away, it should not
