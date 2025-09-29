@@ -37,7 +37,8 @@ public class TestInteractions {
 		
 		
 		int hitCount2 = 0;
-		//check if archer does not hit player if they are far away, it should not
+		//test archer's behavior at a distance
+			
 		for(int i = 0; i<500; i++) {
 			InteractionResult result = archer.interact(gameBoard, 1);
 			if(InteractionResult.KILL == result){
@@ -45,7 +46,13 @@ public class TestInteractions {
 			}
 		}
 		
-		assertTrue(hitCount2 == 0);
+//The probability of getting hit assuming the player is at location 1
+//and the archer is at location 15 (they are 14 away from each other)
+//is (21-14)/42 = 7/42.
+//based on some stats stuff (bootstrap distribution) the number of hits
+//should fall between 57 and 109 99% of the time
+		assertTrue((hitCount2>57)&&(hitCount2<109));
+//		assertTrue(hitCount2 == 0);
 		
 		
 		
