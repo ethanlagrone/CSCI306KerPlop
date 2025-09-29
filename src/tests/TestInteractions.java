@@ -82,7 +82,6 @@ public class TestInteractions {
 		//yay stats!)
 		assertTrue((hitCount>28)&&(hitCount<72));
 		
-		int hitCount2 = 0;
 		
 		int hitCount2 = 0;
 		//check if canon does not hit player if they are far away, it should not
