@@ -24,7 +24,8 @@ public class TestInteractions {
 		Archer archer = new Archer(15);
 		gameBoard[15] = archer;
 		int hitCount = 0;
-		//check if archer kills player over 500 attempts, almost assuredly will be true
+		//check if archer kills player expected amount over 500 attempts
+		//when player is relatively close
 		for(int i = 0; i<500; i++) {
 			InteractionResult result = archer.interact(gameBoard, 13);
 			if(InteractionResult.KILL == result){
@@ -32,7 +33,10 @@ public class TestInteractions {
 			}
 		}
 		//Barring an extreme statistical anomaly, this should be true
-		assertTrue(hitCount > 0);
+		//Based on a 99% confidence interval
+		//(chance of hit should be (21-(15-13))/42 = 19/42 with a SE
+		//of about .22)
+		assertTrue((hitCount>193)&&(hitCount<260));
 		
 		
 		
@@ -57,7 +61,6 @@ public class TestInteractions {
 		
 		
 	}
-	
 	
 	//test canon interactions
 	@Test
