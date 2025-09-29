@@ -18,6 +18,7 @@ import levelPieces.Treasure;
 public class TestInteractions {
 	
 	//test archer interactions
+	//has a 2% chance of failure
 	@Test
 	public void archerInteraction() {
 		Drawable [] gameBoard = new Drawable[GameEngine.BOARD_SIZE];
@@ -63,6 +64,7 @@ public class TestInteractions {
 	}
 	
 	//test canon interactions
+	//has a 1% chance of failure
 	@Test
 	public void canonInteraction() {
 		Drawable [] gameBoard = new Drawable[GameEngine.BOARD_SIZE];
